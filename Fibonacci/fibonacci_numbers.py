@@ -1,4 +1,19 @@
 import time 
+import random 
+
+def generate_random_integers(N):
+    with open("input_numbers.txt", "w") as gen_integer_file:
+        fact_numbers = [] 
+        for number in range(1, N):
+            fact_numbers.append(number)
+            random.shuffle(fact_numbers)
+           
+        for num in fact_numbers:
+            gen_integer_file.write(str(num))
+            gen_integer_file.write("\n")
+
+N = 100
+generate_random_integers(N)
 
 def calculate_fibonacci(num):
     series = [] 
