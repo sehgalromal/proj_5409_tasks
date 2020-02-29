@@ -26,11 +26,10 @@ def calculate_fibonacci(num):
         series.append(third)
         first = second 
         second = third
-        third = first + second 
+        third = first + second
+        time.sleep(0.002)
     return series 
     
-
-
 def read_numbers(file_name):
     with open("input_numbers.txt", "r", ) as input_file:
         read_lines = input_file.read().splitlines()
@@ -42,7 +41,7 @@ def read_numbers(file_name):
             result = calculate_fibonacci(number)
             end = time.time()
             total_time = (end - start) * 1000
-            f.write(str(rId) + " " + str(i) + " " + str(result) + " " + str(round(total_time,2)) + " ms")
+            f.write(str(rId) + " " + str(i) + " " + str(result) + " " + str(round(total_time,2)) + "s")
             f.write("\n")
             rId += 1
             
