@@ -20,6 +20,7 @@ def calculate_factorial(num):
     fact = 1
     while counter !=0 :
         fact = fact*counter
+        time.sleep(0.002)
         counter -= 1
     return fact
 
@@ -34,7 +35,7 @@ def read_numbers(file_name):
             result = calculate_factorial(number)
             end = time.time()
             total_time = (end - start) * 1000
-            f.write(str(rId) + " " + str(i) + " " + str(result) + " " + str(round(total_time,2)) + " ms")
+            f.write(str(rId) + " " + str(i) + " " + str(result) + " " + str(round(total_time,2)) + "s")
             f.write("\n")
             rId += 1
 
